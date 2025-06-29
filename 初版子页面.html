@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码评估 | CodeGrader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="初版.css">
+</head>
+<body>
+    <header class="eval-header">
+        <a href="初版.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> 返回主页
+        </a >
+        <div class="eval-title">代码评估</div>
+        <div class="user-info">
+            <span id="usernameDisplay">游客</span>
+            <button id="logoutBtn" class="btn-icon">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="eval-container">
+        <div class="eval-card">
+            <div class="language-selector">
+                <label for="language">选择语言：</label>
+                <select id="language">
+                    <option value="c">C语言</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+
+            <textarea id="codeInput" placeholder="请粘贴您的代码..."></textarea>
+
+            <div class="action-buttons">
+                <button id="submitBtn" class="primary-button">
+                    <i class="fas fa-play"></i> 运行评估
+                </button>
+                <button id="clearBtn" class="secondary-button">
+                    <i class="fas fa-trash-alt"></i> 清空
+                </button>
+            </div>
+        </div>
+
+        <div id="resultCard" class="result-card hidden">
+            <div class="score-header">
+                <h3><i class="fas fa-chart-line"></i> 评估结果</h3>
+                <div class="score-badge" id="scoreValue"></div>
+            </div>
+            <div class="feedback-content" id="feedbackContent"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

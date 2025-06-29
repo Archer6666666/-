@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGrader | 代码自动评分</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="初版.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>CodeGrader</span>
+        </div>
+        <div class="auth-buttons">
+            <button id="loginBtn" class="btn-text">登录</button>
+            <span>|</span>
+            <button id="registerBtn" class="btn-text">注册</button>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="landing-page">
+        <div class="hero-section">
+            <h1>代码质量评估系统</h1>
+            <p>自动分析代码质量，提供专业改进建议</p >
+            <a href="初版子页面.html" class="cta-button">
+                <i class="fas fa-play-circle"></i> 开始评估
+            </a >
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>快速评估</h3>
+                <p>30秒内获取代码评分报告</p >
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>多语言支持</h3>
+                <p>C/Java/Python等主流语言</p >
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>智能建议</h3>
+                <p>针对性改进方案</p >
+            </div>
+        </div>
+    </main>
+
+    <!-- 登录模态框 -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>欢迎登录</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="用户名" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="密码" required>
+                </div>
+                <button type="submit" class="btn-login">登录</button>
+            </form>
+            <p class="register-link">没有账号？立即注册</p >
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div id="registerModal" class="modal hidden">
+         <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>注册新账号</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="newUsername" placeholder="用户名" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="邮箱" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="newPassword" placeholder="密码" required>
+                </div>
+                <button type="submit" class="btn-register">注册</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
